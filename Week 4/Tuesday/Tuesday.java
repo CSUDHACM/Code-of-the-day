@@ -1,5 +1,4 @@
-
-public class tuesday {
+public class Tuesday {
     
     public static void main(String[] args) {
         
@@ -47,6 +46,19 @@ public class tuesday {
         
         return num;
     }
+
+    public static int[] beckersStringToInts(String s) {
+      String[] splits = s.split(" ");
+      int n = splits.length;
+      int[] ints = new int[n-1];
+
+      for (int i = 1; i < n; i++) {
+        ints[i-1] = Integer.parseInt(splits[i]);
+      }
+
+      return ints;
+    }
+
 	public static int[] separate(String string_to_convert) {//Rushabh's Method
 		int size_of_string=string_to_convert.length();	//Getting Size of the string
 		int lengthOfArray=0; //Initializing the variable
