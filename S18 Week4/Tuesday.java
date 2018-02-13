@@ -66,3 +66,22 @@ public class FizzThatBuzz {
 		
 		return result;
 	}
+
+	public static String retStr(int n) // Daniel's Method
+	    { 
+		 String temp = "";
+		if((n%15) == 0)
+		{
+		    temp = "Fizzbuzz";
+		}
+		else if((n%5) == 0)
+		{
+		    temp= "Buzz";
+		}
+		else if((n%3)== 0)
+		{
+		    temp= "Fizz";
+		}
+
+	       return temp;
+	    }
