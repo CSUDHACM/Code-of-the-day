@@ -13,4 +13,39 @@ public class NonDup {
     }
     //Insert your method below this line.
     
+    //James Method
+    public static int findNonDup(int[] myArr) {
+        for (int i = 0; i <= myArr.length - 1; i++) {
+
+            for (int j = i + 1; j <= myArr.length - 1; j++) {
+                if (myArr[i] > myArr[j]) {
+                    //int temp = myArr[j];
+                    //myArr[j] = myArr[i];
+                    //myArr[i] = temp;\
+                    
+                    myArr[i] = myArr[i] ^ myArr[j];
+                    myArr[j] = myArr[i] ^ myArr[j];
+                    myArr[i] = myArr[i] ^ myArr[j];
+                }
+            }
+        }
+
+        for (int i = 0; i < myArr.length - 1; i += 2) {
+            if (myArr[i] != myArr[i + 1]) {
+                return myArr[i];
+            }
+        }
+        return myArr[myArr.length - 1];
+    }
+    
+    //Martin's Method
+    public static int nonDup(int[] nonDupArr)
+    {
+        int XOR = 0;
+        for (int current_index = 0; current_index < nonDupArr.length; current_index++)
+        {
+            XOR ^= nonDupArr[current_index];
+        }
+        return XOR;
+    }
 }
