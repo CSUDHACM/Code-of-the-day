@@ -7,8 +7,9 @@ public class SearchImplementation {
         for (int i = 0; i < sortedArray.length; i++) {
             sortedArray[i] = (int) (Math.random() * 100 + 1);   //Fills the array with numbers ranging from 1 to 100.
         }
-        Arrays.sort(sortedArray);                               //Java provided method that sorts the array for us.
         int elementToFind = (int) (Math.random() * 100 + 1);    //Variable that creates a random item for us to search.
+        sortedArray[(int) (Math.random() * sortedArray.length)] = elementToFind;   //Inserts element in a random index.
+        Arrays.sort(sortedArray);                               //Java provided method that sorts the array for us.
         System.out.println("Element to find: " + elementToFind);//Print that lets us know what the element is.
         
         /*
