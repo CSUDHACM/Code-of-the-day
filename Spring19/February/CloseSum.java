@@ -28,7 +28,7 @@ public class CloseSum {
                     item2 = arr[rightInd];
                     diff = (int) Math.abs(arr[leftInd] + arr[rightInd] - key);
                 }
-                if ((int) Math.abs(arr[leftInd] + arr[rightInd - 1] - key) < diff) {    //Check the next element for potential closer pair.
+                if ((int) Math.abs(arr[leftInd] + arr[rightInd - 1] - key) <= diff) {    //Check the next element for potential closer pair.
                     rightInd--;
                 } else {
                     leftInd++;
