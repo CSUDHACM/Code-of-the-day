@@ -38,3 +38,29 @@ public class CloseSum {
         }
     }
 }
+
+
+/*
+ while (leftInd < rightInd) {
+                if ((int) Math.abs(arr[leftInd] + arr[rightInd] - key) < diff) {    //If pair sum is close to key, update items + diff.
+                    item1 = arr[leftInd];
+                    item2 = arr[rightInd];
+                    diff = (int) Math.abs(arr[leftInd] + arr[rightInd] - key);
+					System.out.println(item1);
+					System.out.println(item2);
+					System.out.println("The diff is: " +diff);
+                }
+                if ((int) Math.abs(arr[leftInd] + arr[rightInd - 1] - key) <= diff) {    //Check the next element for potential closer pair.
+                    System.out.println((int) Math.abs(arr[leftInd] + arr[rightInd - 1] - key) < diff);
+					System.out.println("Prev rIndex is: " + rightInd);
+					rightInd--;
+					System.out.println("The rIndex is: " +rightInd);
+                } else {
+                    leftInd++;
+					System.out.println("The lIndex is: " +leftInd);
+                }
+            }
+            System.out.println("Key: " + key + "\nClosest Pair: " + item1 + " " + item2);
+        }
+    }
+ */
